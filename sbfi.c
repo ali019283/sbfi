@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<string.h>
+#include<stdlib.h>
 unsigned char i[30000] = {0};
 unsigned char *a = i;
 void sbfi(char *b){
@@ -27,4 +28,15 @@ void sbfi(char *b){
 		}
 	}
 }
-int main(){sbfi(",[.[-],]"); return 0;}
+int main(int argc, char const *argv[]){
+	FILE *fptr; 
+	fptr = fopen(argv[1], "r");
+	fseek(fptr, 0L, SEEK_END);
+	long len = ftell(fptr);
+	rewind(fptr);
+	char *str = malloc(len + 1);
+	fgets(str, len + 1, fptr); sbfi(str); 
+	fclose(fptr);
+	free(str);
+	return 0; 
+}
