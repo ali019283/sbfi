@@ -1,7 +1,6 @@
 SOURCES=sbfi.c
 EXECUTABLE=sbfi
 PREFIX=/usr/local
-
 CFLAGS += -O2
 
 all:
