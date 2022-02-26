@@ -1,5 +1,5 @@
 # sbfi
-sbfi is a branfuck interpreter written in C
+sbfi is a branfuck interpreter with aditional features added to bf
 
 # installing / compiling
 run 
