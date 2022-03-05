@@ -29,7 +29,6 @@ void sbfi(char *b){
 			case ')':
 				  if (*a){
 				  	z = l[k];
-					z++;
 					break;
 				  }else{
 				  	while(b[z] == '}'){
