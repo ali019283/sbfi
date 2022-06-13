@@ -25,6 +25,20 @@ void sbfi(char *b){
 					--k;
 					break;
 				}
+			case '(': ++k; l[k] = z; continue;
+			case ')':
+				  if (*a){
+				  	z = l[k];
+					z++;
+					break;
+				  }else{
+				  	while(b[z] == '}'){
+						z++;
+					}
+					break;
+				  }
+			case '}': break;
+
 		}
 	}
 }
